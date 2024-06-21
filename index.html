@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Banner SDK Integration</title>
+
+    <!-- Load Smart Banner SDK via CDN -->
+    <script type="application/javascript">
+        !function(e,n,t,a,o,s,r,i,c){var d=o+"_q";e[o]=e[o]||{},e[d]=e[d]||[];
+        for(var u=0;u<s.length;u++)r(e[o],e[d],s[u]);
+        i=n.createElement(t),c=n.getElementsByTagName(t)[0],i.async=!0,i.src="https://cdn.adjust.com/adjust-smart-banner-latest.min.js",
+        i.onload=function(){e[o]=e[o].default;
+        for(var n=0;n<e[d].length;n++)e[o][e[d][n][0]]?e[o][e[d][n][0]].apply(e[o],e[d][n][1]):
+        console.error("No such function found in "+o+": "+e[d][n][0]);e[d]=[]},c.parentNode.insertBefore(i,c)}
+        (window,document,"script",0,"AdjustSmartBanner",["init","show","hide","setLanguage","setIosDeepLinkPath","setAndroidDeepLinkPath","setContext","setAndroidAppSchema","setDeepLinkPath"],
+        (function(e,n,t){e[t]=function(){n.push([t,arguments])}}));
+    </script>
+
+    <script>
+        // Initialize the Smart Banner SDK
+        AdjustSmartBanner.init({
+            appToken: "fh2mgiwybo5c",
+            },
+            language: "en" // Optional: Set default language to English
+        });
+
+        // Example of setting language dynamically
+        // AdjustSmartBanner.setLanguage("fr");
+    </script>
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <p>This is a basic website with Smart Banner SDK integration.</p>
+</body>
+</html>
